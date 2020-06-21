@@ -5,34 +5,33 @@
             <li class="nav-item active"><a href=""><i class="la la-mouse-pointer"></i><span
                         class="menu-title" data-i18n="nav.add_on_drag_drop.main">الرئيسية </span></a>
             </li>
-
-            <li class="nav-item"><a href=""><i class="la la-home"></i>
-                    <span class="menu-title" data-i18n="nav.dash.main">المتاجر </span>
+            <li class="nav-item" open><a href=""><i class="la la-home"></i>
+                    <span class="menu-title" data-i18n="nav.dash.main">لغات الموقع </span>
                     <span
-                        class="badge badge badge-info badge-pill float-right mr-2">5</span>
+                        class="badge badge badge-info badge-pill float-right mr-2">{{ App\Language::count() }}</span>
                 </a>
                 <ul class="menu-content">
-                    <li class="active"><a class="menu-item" href=""
-                                          data-i18n="nav.dash.ecommerce"> عرض الكل </a>
+                    <li class="active"><a class="menu-item" href="{{ route('admin.languages') }}"
+                        data-i18n="nav.dash.ecommerce"> عرض الكل </a>
                     </li>
-                    <li><a class="menu-item" href="" data-i18n="nav.dash.crypto">أضافة
-                            متجر جديد </a>
+                    <li><a class="menu-item" href="{{ route('admin.languages.create') }}" data-i18n="nav.dash.crypto">أضافة
+                            لغة جديدة </a>
                     </li>
                 </ul>
             </li>
 
 
             <li class="nav-item"><a href=""><i class="la la-group"></i>
-                    <span class="menu-title" data-i18n="nav.dash.main">الفرق </span>
+                    <span class="menu-title" data-i18n="nav.dash.main">اقسام الموقع </span>
                     <span
-                        class="badge badge badge-danger badge-pill float-right mr-2"></span>
+                        class="badge badge badge-danger badge-pill float-right mr-2">{{ App\MainCategory::count() }}</span>
                 </a>
                 <ul class="menu-content">
                     <li class="active"><a class="menu-item" href=""
-                                          data-i18n="nav.dash.ecommerce"> عرض الكل </a>
+                        data-i18n="nav.dash.ecommerce"> عرض الكل </a>
                     </li>
                     <li><a class="menu-item" href="" data-i18n="nav.dash.crypto">أضافة
-                            فريق </a>
+                            قسم جديد </a>
                     </li>
                 </ul>
             </li>
@@ -44,7 +43,7 @@
                 </a>
                 <ul class="menu-content">
                     <li class="active"><a class="menu-item" href=""
-                                          data-i18n="nav.dash.ecommerce"> عرض الكل </a>
+                        data-i18n="nav.dash.ecommerce"> عرض الكل </a>
                     </li>
                     <li><a class="menu-item" href="" data-i18n="nav.dash.crypto">أضافة
                             مدرب </a>
@@ -60,7 +59,7 @@
                 </a>
                 <ul class="menu-content">
                     <li class="active"><a class="menu-item" href=""
-                                          data-i18n="nav.dash.ecommerce"> عرض الكل </a>
+                        data-i18n="nav.dash.ecommerce"> عرض الكل </a>
                     </li>
                     <li><a class="menu-item" href="" data-i18n="nav.dash.crypto">أضافة
                             طالب </a>
@@ -77,7 +76,7 @@
                 </a>
                 <ul class="menu-content">
                     <li class="active"><a class="menu-item" href=""
-                                          data-i18n="nav.dash.ecommerce"> تذاكر الطلاب </a>
+                        data-i18n="nav.dash.ecommerce"> تذاكر الطلاب </a>
                     </li>
                 </ul>
             </li>
@@ -911,24 +910,24 @@
                            data-i18n="nav.extra_components.ex_component_lists">Lists</a>
                     </li>
                     <li><a class="menu-item" href="ex-component-toolbar.html"
-                           data-i18n="nav.extra_components.ex_component_toolbar">Toolbar</a>
+                        data-i18n="nav.extra_components.ex_component_toolbar">Toolbar</a>
                     </li>
                     <li><a class="menu-item" href="ex-component-knob.html"
-                           data-i18n="nav.extra_components.ex_component_knob">Knob</a>
+                        data-i18n="nav.extra_components.ex_component_knob">Knob</a>
                     </li>
                     <li><a class="menu-item" href="ex-component-long-press.html"
-                           data-i18n="nav.extra_components.ex_component_long_press">Long Press</a>
+                        data-i18n="nav.extra_components.ex_component_long_press">Long Press</a>
                     </li>
                     <li><a class="menu-item" href="ex-component-offline.html"
-                           data-i18n="nav.extra_components.ex_component_offline">Offline</a>
+                        data-i18n="nav.extra_components.ex_component_offline">Offline</a>
                     </li>
                     <li><a class="menu-item" href="ex-component-zoom.html"
-                           data-i18n="nav.extra_components.ex_component_zoom">Zoom</a>
+                        data-i18n="nav.extra_components.ex_component_zoom">Zoom</a>
                     </li>
                 </ul>
             </li>
             <li class=" nav-item"><a href="#"><i class="la la-eye"></i><span class="menu-title"
-                                                                             data-i18n="nav.icons.main">Icons</span></a>
+                data-i18n="nav.icons.main">Icons</span></a>
                 <ul class="menu-content">
                     <li><a class="menu-item" href="icons-feather.html" data-i18n="nav.icons.icons_feather">Feather</a>
                     </li>
@@ -936,7 +935,7 @@
                             Awesome</a>
                     </li>
                     <li><a class="menu-item" href="icons-meteocons.html"
-                           data-i18n="nav.icons.icons_meteocons">Meteocons</a>
+                        data-i18n="nav.icons.icons_meteocons">Meteocons</a>
                     </li>
                     <li><a class="menu-item" href="icons-simple-line-icons.html" data-i18n="nav.icons.icons_linecons">Simple
                             Line Icons</a>
@@ -944,7 +943,7 @@
                 </ul>
             </li>
             <li class=" nav-item"><a href="animation.html"><i class="la la-spinner spinner"></i><span class="menu-title"
-                                                                                                      data-i18n="nav.animation.main">Animation</span></a>
+                data-i18n="nav.animation.main">Animation</span></a>
             </li>
             <li class=" navigation-header">
                 <span data-i18n="nav.category.forms">Forms</span><i class="la la-ellipsis-h ft-minus"
@@ -953,44 +952,44 @@
                                                                     data-original-title="Forms"></i>
             </li>
             <li class=" nav-item"><a href="#"><i class="la la-terminal"></i><span class="menu-title"
-                                                                                  data-i18n="nav.form_elements.main">Form Elements</span></a>
+                data-i18n="nav.form_elements.main">Form Elements</span></a>
                 <ul class="menu-content">
                     <li><a class="menu-item" href="form-inputs.html" data-i18n="nav.form_elements.form_inputs">Form
                             Inputs</a>
                     </li>
                     <li><a class="menu-item" href="form-input-groups.html"
-                           data-i18n="nav.form_elements.form_input_groups">Input Groups</a>
+                        data-i18n="nav.form_elements.form_input_groups">Input Groups</a>
                     </li>
                     <li><a class="menu-item" href="form-input-grid.html" data-i18n="nav.form_elements.form_input_grid">Input
                             Grid</a>
                     </li>
                     <li><a class="menu-item" href="form-extended-inputs.html"
-                           data-i18n="nav.form_elements.form_extended_inputs">Extended Inputs</a>
+                        data-i18n="nav.form_elements.form_extended_inputs">Extended Inputs</a>
                     </li>
                     <li><a class="menu-item" href="form-checkboxes-radios.html"
-                           data-i18n="nav.form_elements.form_checkboxes_radios">Checkboxes &amp; Radios</a>
+                        data-i18n="nav.form_elements.form_checkboxes_radios">Checkboxes &amp; Radios</a>
                     </li>
                     <li><a class="menu-item" href="form-switch.html"
-                           data-i18n="nav.form_elements.form_switch">Switch</a>
+                        data-i18n="nav.form_elements.form_switch">Switch</a>
                     </li>
                     <li><a class="menu-item" href="#" data-i18n="nav.form_elements.form_select.main">Select</a>
                         <ul class="menu-content">
                             <li><a class="menu-item" href="form-select2.html"
-                                   data-i18n="nav.form_elements.form_select.form_select2">Select2</a>
+                                data-i18n="nav.form_elements.form_select.form_select2">Select2</a>
                             </li>
                             <li><a class="menu-item" href="form-selectize.html"
-                                   data-i18n="nav.form_elements.form_select.form_selectize">Selectize</a>
+                                data-i18n="nav.form_elements.form_select.form_selectize">Selectize</a>
                             </li>
                             <li><a class="menu-item" href="form-selectivity.html"
-                                   data-i18n="nav.form_elements.form_select.form_selectivity">Selectivity</a>
+                                data-i18n="nav.form_elements.form_select.form_selectivity">Selectivity</a>
                             </li>
                             <li><a class="menu-item" href="form-select-box-it.html"
-                                   data-i18n="nav.form_elements.form_select.form_select_box_it">Select Box It</a>
+                                data-i18n="nav.form_elements.form_select.form_select_box_it">Select Box It</a>
                             </li>
                         </ul>
                     </li>
                     <li><a class="menu-item" href="form-dual-listbox.html"
-                           data-i18n="nav.form_elements.form_dual_listbox">Dual Listbox</a>
+                        data-i18n="nav.form_elements.form_dual_listbox">Dual Listbox</a>
                     </li>
                     <li><a class="menu-item" href="form-tags-input.html" data-i18n="nav.form_elements.form_tags_input">Tags
                             Input</a>
@@ -1000,56 +999,56 @@
                 </ul>
             </li>
             <li class=" nav-item"><a href="#"><i class="la la-file-text"></i><span class="menu-title"
-                                                                                   data-i18n="nav.form_layouts.main">Form Layouts</span></a>
+                data-i18n="nav.form_layouts.main">Form Layouts</span></a>
                 <ul class="menu-content">
                     <li><a class="menu-item" href="form-layout-basic.html"
-                           data-i18n="nav.form_layouts.form_layout_basic">Basic Forms</a>
+                        data-i18n="nav.form_layouts.form_layout_basic">Basic Forms</a>
                     </li>
                     <li><a class="menu-item" href="form-layout-horizontal.html"
-                           data-i18n="nav.form_layouts.form_layout_horizontal">Horizontal Forms</a>
+                        data-i18n="nav.form_layouts.form_layout_horizontal">Horizontal Forms</a>
                     </li>
                     <li><a class="menu-item" href="form-layout-hidden-labels.html"
-                           data-i18n="nav.form_layouts.form_layout_hidden_labels">Hidden Labels</a>
+                        data-i18n="nav.form_layouts.form_layout_hidden_labels">Hidden Labels</a>
                     </li>
                     <li><a class="menu-item" href="form-layout-form-actions.html"
-                           data-i18n="nav.form_layouts.form_layout_form_actions">Form Actions</a>
+                        data-i18n="nav.form_layouts.form_layout_form_actions">Form Actions</a>
                     </li>
                     <li><a class="menu-item" href="form-layout-row-separator.html"
-                           data-i18n="nav.form_layouts.form_layout_row_separator">Row Separator</a>
+                        data-i18n="nav.form_layouts.form_layout_row_separator">Row Separator</a>
                     </li>
                     <li><a class="menu-item" href="form-layout-bordered.html"
-                           data-i18n="nav.form_layouts.form_layout_bordered">Bordered</a>
+                        data-i18n="nav.form_layouts.form_layout_bordered">Bordered</a>
                     </li>
                     <li><a class="menu-item" href="form-layout-striped-rows.html"
-                           data-i18n="nav.form_layouts.form_layout_striped_rows">Striped Rows</a>
+                        data-i18n="nav.form_layouts.form_layout_striped_rows">Striped Rows</a>
                     </li>
                     <li><a class="menu-item" href="form-layout-striped-labels.html"
-                           data-i18n="nav.form_layouts.form_layout_striped_labels">Striped Labels</a>
+                        data-i18n="nav.form_layouts.form_layout_striped_labels">Striped Labels</a>
                     </li>
                 </ul>
             </li>
             <li class=" nav-item"><a href="#"><i class="la la-paste"></i><span class="menu-title"
-                                                                               data-i18n="nav.form_wizard.main">Form Wizard</span></a>
+                data-i18n="nav.form_wizard.main">Form Wizard</span></a>
                 <ul class="menu-content">
                     <li><a class="menu-item" href="form-wizard-circle-style.html"
-                           data-i18n="nav.form_wizard.form_wizard_circle_style">Circle Style</a>
+                        data-i18n="nav.form_wizard.form_wizard_circle_style">Circle Style</a>
                     </li>
                     <li><a class="menu-item" href="form-wizard-notification-style.html"
-                           data-i18n="nav.form_wizard.form_wizard_notification_style">Notification Style</a>
+                        data-i18n="nav.form_wizard.form_wizard_notification_style">Notification Style</a>
                     </li>
                 </ul>
             </li>
             <li class=" nav-item"><a href="form-repeater.html"><i class="la la-repeat"></i><span class="menu-title"
-                                                                                                 data-i18n="nav.form_repeater.main">Form Repeater</span></a>
+                data-i18n="nav.form_repeater.main">Form Repeater</span></a>
             </li>
             <li class=" navigation-header">
                 <span data-i18n="nav.category.tables">Tables</span><i class="la la-ellipsis-h ft-minus"
-                                                                      data-toggle="tooltip"
-                                                                      data-placement="right"
-                                                                      data-original-title="Tables"></i>
+                    data-toggle="tooltip"
+                    data-placement="right"
+                    data-original-title="Tables"></i>
             </li>
             <li class=" nav-item"><a href="#"><i class="la la-table"></i><span class="menu-title"
-                                                                               data-i18n="nav.bootstrap_tables.main">Bootstrap Tables</span></a>
+                data-i18n="nav.bootstrap_tables.main">Bootstrap Tables</span></a>
                 <ul class="menu-content">
                     <li><a class="menu-item" href="table-basic.html" data-i18n="nav.bootstrap_tables.table_basic">Basic
                             Tables</a>
@@ -1072,10 +1071,10 @@
                                                                             data-i18n="nav.data_tables.main">DataTables</span></a>
                 <ul class="menu-content">
                     <li><a class="menu-item" href="dt-basic-initialization.html"
-                           data-i18n="nav.data_tables.dt_basic_initialization">Basic Initialisation</a>
+                        data-i18n="nav.data_tables.dt_basic_initialization">Basic Initialisation</a>
                     </li>
                     <li><a class="menu-item" href="dt-advanced-initialization.html"
-                           data-i18n="nav.data_tables.dt_advanced_initialization">Advanced initialisation</a>
+                        data-i18n="nav.data_tables.dt_advanced_initialization">Advanced initialisation</a>
                     </li>
                     <li><a class="menu-item" href="dt-styling.html" data-i18n="nav.data_tables.dt_styling">Styling</a>
                     </li>
@@ -1087,77 +1086,77 @@
                 </ul>
             </li>
             <li class=" nav-item"><a href="#"><i class="la la-th-large"></i><span class="menu-title"
-                                                                                  data-i18n="nav.datatable_extensions.main">DataTables Ext.</span></a>
+                data-i18n="nav.datatable_extensions.main">DataTables Ext.</span></a>
                 <ul class="menu-content">
                     <li><a class="menu-item" href="dt-extensions-autofill.html"
-                           data-i18n="nav.datatable_extensions.dt_extensions_autofill">AutoFill</a>
+                        data-i18n="nav.datatable_extensions.dt_extensions_autofill">AutoFill</a>
                     </li>
                     <li><a class="menu-item" href="#" data-i18n="nav.datatable_extensions.datatable_buttons.main">Buttons</a>
                         <ul class="menu-content">
                             <li><a class="menu-item" href="dt-extensions-buttons-basic.html"
-                                   data-i18n="nav.datatable_extensions.datatable_buttons.dt_extensions_buttons_basic">Basic
+                                data-i18n="nav.datatable_extensions.datatable_buttons.dt_extensions_buttons_basic">Basic
                                     Buttons</a>
                             </li>
                             <li><a class="menu-item" href="dt-extensions-buttons-html-5-data-export.html"
-                                   data-i18n="nav.datatable_extensions.datatable_buttons.dt_extensions_buttons_html_5_data_export">HTML
+                                data-i18n="nav.datatable_extensions.datatable_buttons.dt_extensions_buttons_html_5_data_export">HTML
                                     5 Data Export</a>
                             </li>
                             <li><a class="menu-item" href="dt-extensions-buttons-flash-data-export.html"
-                                   data-i18n="nav.datatable_extensions.datatable_buttons.dt_extensions_buttons_flash_data_export">Flash
+                                data-i18n="nav.datatable_extensions.datatable_buttons.dt_extensions_buttons_flash_data_export">Flash
                                     Data Export</a>
                             </li>
                             <li><a class="menu-item" href="dt-extensions-buttons-column-visibility.html"
-                                   data-i18n="nav.datatable_extensions.datatable_buttons.dt_extensions_buttons_column_visibility">Column
+                                data-i18n="nav.datatable_extensions.datatable_buttons.dt_extensions_buttons_column_visibility">Column
                                     Visibility</a>
                             </li>
                             <li><a class="menu-item" href="dt-extensions-buttons-print.html"
-                                   data-i18n="nav.datatable_extensions.datatable_buttons.dt_extensions_buttons_print">Print</a>
+                                data-i18n="nav.datatable_extensions.datatable_buttons.dt_extensions_buttons_print">Print</a>
                             </li>
                             <li><a class="menu-item" href="dt-extensions-buttons-api.html"
-                                   data-i18n="nav.datatable_extensions.datatable_buttons.dt_extensions_buttons_api">API</a>
+                                data-i18n="nav.datatable_extensions.datatable_buttons.dt_extensions_buttons_api">API</a>
                             </li>
                         </ul>
                     </li>
                     <li><a class="menu-item" href="dt-extensions-column-reorder.html"
-                           data-i18n="nav.datatable_extensions.dt_extensions_column_reorder">Column Reorder</a>
+                        data-i18n="nav.datatable_extensions.dt_extensions_column_reorder">Column Reorder</a>
                     </li>
                     <li><a class="menu-item" href="dt-extensions-fixed-columns.html"
-                           data-i18n="nav.datatable_extensions.dt_extensions_fixed_columns">Fixed Columns</a>
+                        data-i18n="nav.datatable_extensions.dt_extensions_fixed_columns">Fixed Columns</a>
                     </li>
                     <li><a class="menu-item" href="dt-extensions-key-table.html"
-                           data-i18n="nav.datatable_extensions.dt_extensions_key_table">Key Table</a>
+                        data-i18n="nav.datatable_extensions.dt_extensions_key_table">Key Table</a>
                     </li>
                     <li><a class="menu-item" href="dt-extensions-row-reorder.html"
-                           data-i18n="nav.datatable_extensions.dt_extensions_row_reorder">Row Reorder</a>
+                        data-i18n="nav.datatable_extensions.dt_extensions_row_reorder">Row Reorder</a>
                     </li>
                     <li><a class="menu-item" href="dt-extensions-select.html"
-                           data-i18n="nav.datatable_extensions.dt_extensions_select">Select</a>
+                        data-i18n="nav.datatable_extensions.dt_extensions_select">Select</a>
                     </li>
                     <li><a class="menu-item" href="dt-extensions-fix-header.html"
-                           data-i18n="nav.datatable_extensions.dt_extensions_fix_header">Fix Header</a>
+                        data-i18n="nav.datatable_extensions.dt_extensions_fix_header">Fix Header</a>
                     </li>
                     <li><a class="menu-item" href="dt-extensions-responsive.html"
-                           data-i18n="nav.datatable_extensions.dt_extensions_responsive">Responsive</a>
+                        data-i18n="nav.datatable_extensions.dt_extensions_responsive">Responsive</a>
                     </li>
                     <li><a class="menu-item" href="dt-extensions-column-visibility.html"
-                           data-i18n="nav.datatable_extensions.dt_extensions_column_visibility">Column Visibility</a>
+                        data-i18n="nav.datatable_extensions.dt_extensions_column_visibility">Column Visibility</a>
                     </li>
                 </ul>
             </li>
             <li class=" nav-item"><a href="#"><i class="la la-th-list"></i><span class="menu-title"
-                                                                                 data-i18n="nav.handson_table.main">Handson Table</span></a>
+                data-i18n="nav.handson_table.main">Handson Table</span></a>
                 <ul class="menu-content">
                     <li><a class="menu-item" href="handson-table-appearance.html"
-                           data-i18n="nav.handson_table.handson_table_appearance">Appearance</a>
+                        data-i18n="nav.handson_table.handson_table_appearance">Appearance</a>
                     </li>
                     <li><a class="menu-item" href="handson-table-rows-columns.html"
-                           data-i18n="nav.handson_table.handson_table_rows_columns">Rows Columns</a>
+                        data-i18n="nav.handson_table.handson_table_rows_columns">Rows Columns</a>
                     </li>
                     <li><a class="menu-item" href="handson-table-rows-only.html"
-                           data-i18n="nav.handson_table.handson_table_rows_only">Rows Only</a>
+                        data-i18n="nav.handson_table.handson_table_rows_only">Rows Only</a>
                     </li>
                     <li><a class="menu-item" href="handson-table-columns-only.html"
-                           data-i18n="nav.handson_table.handson_table_columns_only">Columns Only</a>
+                        data-i18n="nav.handson_table.handson_table_columns_only">Columns Only</a>
                     </li>
                     <li><a class="menu-item" href="handson-table-data-operations.html"
                            data-i18n="nav.handson_table.handson_table_data_operations">Data Operations</a>
@@ -1435,7 +1434,7 @@
                             Chart</a>
                     </li>
                     <li><a class="menu-item" href="c3-transform-chart.html"
-                           data-i18n="nav.c3_charts.c3_transform_chart">Transform Chart</a>
+                        data-i18n="nav.c3_charts.c3_transform_chart">Transform Chart</a>
                     </li>
                     <li><a class="menu-item" href="c3-other-charts.html" data-i18n="nav.c3_charts.c3_other_charts">Other
                             Charts</a>
@@ -1443,16 +1442,16 @@
                 </ul>
             </li>
             <li class=" nav-item"><a href="#"><i class="la la-pie-chart"></i><span class="menu-title"
-                                                                                   data-i18n="nav.chartist.main">Chartist</span></a>
+                data-i18n="nav.chartist.main">Chartist</span></a>
                 <ul class="menu-content">
                     <li><a class="menu-item" href="chartist-line-charts.html"
-                           data-i18n="nav.chartist.chartist_line_charts">Line charts</a>
+                        data-i18n="nav.chartist.chartist_line_charts">Line charts</a>
                     </li>
                     <li><a class="menu-item" href="chartist-bar-charts.html"
-                           data-i18n="nav.chartist.chartist_bar_charts">Bar charts</a>
+                        data-i18n="nav.chartist.chartist_bar_charts">Bar charts</a>
                     </li>
                     <li><a class="menu-item" href="chartist-pie-charts.html"
-                           data-i18n="nav.chartist.chartist_pie_charts">Pie charts</a>
+                        data-i18n="nav.chartist.chartist_pie_charts">Pie charts</a>
                     </li>
                 </ul>
             </li>
@@ -1474,27 +1473,27 @@
                 </ul>
             </li>
             <li class=" nav-item"><a href="rickshaw-charts.html"><i class="la la-bullseye"></i><span class="menu-title"
-                                                                                                     data-i18n="nav.rickshaw_charts.main">Rickshaw Charts</span></a>
+                data-i18n="nav.rickshaw_charts.main">Rickshaw Charts</span></a>
             </li>
             <li class=" nav-item"><a href="#"><i class="la la-map"></i><span class="menu-title"
-                                                                             data-i18n="nav.maps.main">Maps</span></a>
+                data-i18n="nav.maps.main">Maps</span></a>
                 <ul class="menu-content">
                     <li><a class="menu-item" href="#" data-i18n="nav.maps.google_maps.main">google Maps</a>
                         <ul class="menu-content">
                             <li><a class="menu-item" href="gmaps-basic-maps.html"
-                                   data-i18n="nav.maps.google_maps.gmaps_basic_maps">Maps</a>
+                                data-i18n="nav.maps.google_maps.gmaps_basic_maps">Maps</a>
                             </li>
                             <li><a class="menu-item" href="gmaps-services.html"
-                                   data-i18n="nav.maps.google_maps.gmaps_services">Services</a>
+                                data-i18n="nav.maps.google_maps.gmaps_services">Services</a>
                             </li>
                             <li><a class="menu-item" href="gmaps-overlays.html"
-                                   data-i18n="nav.maps.google_maps.gmaps_overlays">Overlays</a>
+                                data-i18n="nav.maps.google_maps.gmaps_overlays">Overlays</a>
                             </li>
                             <li><a class="menu-item" href="gmaps-routes.html"
-                                   data-i18n="nav.maps.google_maps.gmaps_routes">Routes</a>
+                                data-i18n="nav.maps.google_maps.gmaps_routes">Routes</a>
                             </li>
                             <li><a class="menu-item" href="gmaps-utils.html"
-                                   data-i18n="nav.maps.google_maps.gmaps_utils">Utils</a>
+                                data-i18n="nav.maps.google_maps.gmaps_utils">Utils</a>
                             </li>
                         </ul>
                     </li>
@@ -1504,20 +1503,20 @@
                                     Mapael</a>
                                 <ul class="menu-content">
                                     <li><a class="menu-item" href="vector-maps-mapael-basic.html"
-                                           data-i18n="nav.maps.vector_maps.jquery_mapael.vector_maps_mapael_basic">Basic
+                                        data-i18n="nav.maps.vector_maps.jquery_mapael.vector_maps_mapael_basic">Basic
                                             Maps</a>
                                     </li>
                                     <li><a class="menu-item" href="vector-maps-mapael-advance.html"
-                                           data-i18n="nav.maps.vector_maps.jquery_mapael.vector_maps_mapael_advance">Advance
+                                        data-i18n="nav.maps.vector_maps.jquery_mapael.vector_maps_mapael_advance">Advance
                                             Maps</a>
                                     </li>
                                 </ul>
                             </li>
                             <li><a class="menu-item" href="vector-maps-jvector.html"
-                                   data-i18n="nav.maps.vector_maps.jvector_maps">jVector Map</a>
+                                data-i18n="nav.maps.vector_maps.jvector_maps">jVector Map</a>
                             </li>
                             <li><a class="menu-item" href="vector-maps-jvq.html"
-                                   data-i18n="nav.maps.vector_maps.vector_maps_jvq">JQV Map</a>
+                                data-i18n="nav.maps.vector_maps.vector_maps_jvq">JQV Map</a>
                             </li>
                         </ul>
                     </li>
