@@ -11,4 +11,18 @@ class MainCategory extends Model
     public function scopeActive($query){
         return $query->where('active',1);
     }
+
+    public function getActive(){
+        return   $this -> active == 1 ? 'مفعل'  : 'غير مفعل';
+    }
+
+    public function getPhotoAttribute($val)
+    {
+        return ($val !== null) ? asset('assets/'.$val) : "";
+
+    }
+
+    public function categories(){
+        return $this->hasMany(self::class,'translation_of');
+    }
 }

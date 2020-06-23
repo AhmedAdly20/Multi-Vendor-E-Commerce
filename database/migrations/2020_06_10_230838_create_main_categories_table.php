@@ -15,6 +15,7 @@ class CreateMainCategoriesTable extends Migration
     {
         Schema::create('main_categories', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
             $table->string('translation_language');
             $table->unsignedBigInteger('translation_of');
             $table->string('slug')->nullable();
