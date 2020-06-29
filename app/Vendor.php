@@ -2,10 +2,12 @@
 
 namespace App;
 
+use Illuminate\Notifications\Notifiable;
 use Illuminate\Database\Eloquent\Model;
 
 class Vendor extends Model
 {
+    use Notifiable;
     protected $fillable = ['name','logo','mobile','address','email','status','category_id'];
 
     protected $hidden = ['category_id'];

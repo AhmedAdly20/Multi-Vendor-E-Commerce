@@ -7,6 +7,8 @@ use Illuminate\Http\Request;
 use App\Vendor;
 use App\MainCategory;
 use App\Http\Requests\VendorRequest;
+use Illuminate\Support\Facades\Notification;
+use App\Notifications\VendorCreated;
 
 class VendorsController extends Controller
 {
@@ -22,7 +24,7 @@ class VendorsController extends Controller
     }
 
     public function store(VendorRequest $request){
-        try {
+        // try {
             if (!$request->has('active'))
                 $request->request->add(['active' => 0]);
             else
@@ -43,15 +45,15 @@ class VendorsController extends Controller
                 'category_id'  => $request->category_id
             ]);
 
-            // Notification::send($vendor, new VendorCreated($vendor));
+            Notification::send($vendor, new VendorCreated($vendor));
 
             return redirect()->route('admin.vendors')->with(['success' => 'تم الحفظ بنجاح']);
 
-        } catch (\Exception $ex) {
+        // } catch (\Exception $ex) {
 
             return redirect()->route('admin.vendors')->with(['error' => 'حدث خطا ما برجاء المحاوله لاحقا']);
 
-        }
+        // }
     }
 
     public function edit(){
