@@ -149,14 +149,16 @@
                                             @endisset
                                         </ul>
                                         <div class="tab-content px-1 pt-1">
+                                            @isset($mainCategory -> categories)
+                                                @foreach($mainCategory -> categories   as $index =>  $translation)
                                             <div role="tabpanel" class="tab-pane  @if($index ==  0) active  @endif  " id="homeLable{{$index}}"
-                                                 aria-labelledby="homeLable-tab"
-                                                 aria-expanded="{{$index ==  0 ? 'true' : 'false'}}">
+                                                aria-labelledby="homeLable-tab"
+                                                aria-expanded="{{$index ==  0 ? 'true' : 'false'}}">
 
                                                 <form class="form"
-                                                      action="{{route('admin.maincategories.update',$translation->id)}}"
-                                                      method="POST"
-                                                      enctype="multipart/form-data">
+                                                    action="{{route('admin.maincategories.update',$translation->id)}}"
+                                                    method="POST"
+                                                    enctype="multipart/form-data">
                                                     @csrf
 
                                                     <input name="id" value="{{$translation->id}}" type="hidden">
@@ -231,7 +233,8 @@
                                                     </div>
                                                 </form>
                                             </div>
-
+                                            @endforeach
+                                            @endisset
                                         </div>
 
                                     </div>
